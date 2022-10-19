@@ -1,6 +1,7 @@
 import './App.css'
 import Button from './components/Button';
 import Container from './components/Container';
+import User from './components/state/User';
 import List from './components/generics/List';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
@@ -47,11 +48,36 @@ function App() {
         </Heading>
       </Oscar>
       <Button handleClick={(event, id) => console.log(event, id)} />
-      <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+      <Container styles={{ border: '1px solid black', padding: '1rem' }} /> 
       <Input value='123' handleChange={(event) => console.log(event.target.value)} />
       <LoggedIn />
+      <User/>
+      {/* <List
+        items={['Batman', 'Superman', 'WonderWoman']} 
+        onClick={(item) => { console.log(item) }}
+      />
       <List
-        items={['Batman', 'Superman']} 
+        items={[1,2,3]} 
+        onClick={(item) => { console.log(item) }}
+      /> */}
+      <List
+        items={[
+          {
+            id: 1,
+            first: 'Bruce',
+            last: 'Wayne',
+          },
+          {
+            id: 2,
+            first: 'Bruce',
+            last: 'Wayne',
+          },
+          {
+            id: 3,
+            first: 'Bruce',
+            last: 'Wayne',
+          },
+        ]} 
         onClick={(item) => { console.log(item) }}
       />
     </div>

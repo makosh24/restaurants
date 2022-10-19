@@ -4,7 +4,7 @@ type ContainerProps = {
 
 const Container = (props: ContainerProps) => {
     return (
-        <div style={props.styles}>
+        <div style={props.styles }>
             Text content goes here
         </div>
     );

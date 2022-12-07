@@ -11,6 +11,11 @@ import Person from './components/Person';
 import PersonList from './components/PersonList';
 import LoggedIn from './components/state/LoggedIn';
 import Status from './components/Status';
+import {Counter} from './components/state/Counter';
+import { Box } from './components/context/Box';
+import { User1 } from './components/context/User';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { UserContextProvider } from './components/context/UserContext';
 
 
 function App() {
@@ -36,6 +41,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* <ThemeContextProvider> */}
+        <Box/>
+      {/* </ThemeContextProvider>       */}
       <Greet isLoggedIn={false} />
       <Greet name='Madi' isLoggedIn={true} messageCount={10} />
       <Person name={personName} />
@@ -52,6 +60,11 @@ function App() {
       <Input value='123' handleChange={(event) => console.log(event.target.value)} />
       <LoggedIn />
       <User/>
+      <UserContextProvider>
+        <User1/>
+      </UserContextProvider>
+      
+      <Counter />
       {/* <List
         items={['Batman', 'Superman', 'WonderWoman']} 
         onClick={(item) => { console.log(item) }}

@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "./UserContext"
 
-export const User = () => {
+export const User1 = () => {
     const userContext = useContext(UserContext);
     const handleLogin = () => {
         userContext.setUser({
